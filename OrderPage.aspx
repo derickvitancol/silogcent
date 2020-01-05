@@ -57,5 +57,99 @@
                 </ul>  
         </div>
     </form>
+
+    <script>
+        window.onload = newItemrow;
+        var num = 0;
+        var arrNum = new Array();
+        var qty = 0;
+        var qtyLabel;
+        function newItemrow() {
+            var name = "nlabel" + num;
+            var n1 = "nrange" + num;
+            var par = "qtyLoad(" + name + "," + n1 + ")";
+
+            var curtable = document.getElementById("itemTable");
+            var nrow = curtable.insertRow();
+            nrow.setAttribute("id", "row" + num);
+            var c1 = nrow.insertCell();
+            var c2 = nrow.insertCell();
+            var c3 = nrow.insertCell();
+
+            var newSel = document.createElement("select");
+
+            var decQty = document.createElement("input");
+            var incQty = document.createElement("input");
+            qtyLabel = document.createElement("label");
+
+            /*var newRange = document.createElement("input");
+            var newLabel = document.createElement("label");*/
+            var removeBut = document.createElement("input");
+
+            /*newRange.setAttribute("type","range");
+            newRange.setAttribute("id",n1);
+            newRange.setAttribute("min","0");
+            newRange.setAttribute("max","10");
+            newRange.setAttribute("onclick",par);*/
+
+            decQty.setAttribute("type", "button");
+            decQty.setAttribute("value", "-");
+            decQty.setAttribute("onclick", "decQty()");
+
+            incQty.setAttribute("type", "button");
+            incQty.setAttribute("value", "+");
+            incQty.setAttribute("onclick", "incQty()");
+
+            removeBut.setAttribute("type", "button");
+            removeBut.setAttribute("value", "X");
+            removeBut.setAttribute("onclick", "removeRow()");
+
+            //newLabel.setAttribute("id",name);
+            //newLabel.innerHTML = newRange.value;
+
+            qtyLabel.setAttribute("id", qty);
+            qtyLabel.innerHTML = 0;
+
+            c1.appendChild(newSel);
+            c2.appendChild(decQty);
+            c2.appendChild(qtyLabel);
+            c2.appendChild(incQty);
+            c3.appendChild(removeBut);
+            arrNum[num];
+            num = num + 1;
+            qty = 0;
+        }
+
+        function decQty() {
+            if (qty == 0) {
+                qtyLabel.innerHTML = 0;
+            }
+            else {
+                qty--;
+                qtyLabel.innerHTML = qty;
+            }
+            return;
+        }
+
+        function incQty() {
+            qty++;
+            qtyLabel.innerHTML = qty;
+            return;
+        }
+
+        function qtyLoad(val, ran) {
+            var lab = document.getElementById(val);
+            var r = document.getElementById(ran);
+            lab.innerHTML = r.value;
+        }
+
+        function func() {
+
+        }
+
+        function removeRow() {
+
+        }
+        </script>
 </body>
 </html>

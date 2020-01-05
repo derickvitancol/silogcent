@@ -1,0 +1,48 @@
+/*MENU GRID STYLE*/
+.menu-grid
+{
+    position: relative;
+    top: 30px;
+    left:500    px;
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    background-color: blueviolet;
+    padding: 10px;
+    
+    height: 300px;
+    width: 300px;
+
+    overflow-y: scroll;
+    overflow-x: scroll;
+
+}
+/* STYLE FOR EDITING THE INDIVIDUAL CELLS IN THE MENU GRID*/
+.menu-grid > div
+{
+    text-align: center;
+    font-size: 30px;
+    background-color: cadetblue;
+
+    height: 100px;
+    width: 100px;
+}
+
+
+.order-part
+{
+    position: relative;
+    
+}
+
+div.orderbutton
+{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    height: 100px;
+    width: 50px;
+    background-color: chartreuse;
+
+}

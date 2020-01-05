@@ -32,8 +32,9 @@
                         <input type="text" name="nameText"/>    
                     </li>
                     <li>
-                        <table id="itemTable" runat="server">
-                        <tr>
+                         
+                           <table id="itemTable">
+                            <tr>
                             <th>Item Made</th>
                             <th>Quantity</th>
                             <th>
@@ -42,6 +43,7 @@
                         </tr>
                         
                         </table>
+                          
                     </li>
                         
                     <!--MAKE A TABLE WHICH CONTAINS THE ORDER COMBO BOXES-->
@@ -61,13 +63,14 @@
     <script>
         window.onload = newItemrow;
         var num = 0;
+        var number = 0;
         var arrNum = new Array();
         var qty = 0;
         var qtyLabel;
+        var ev;
         function newItemrow() {
             var name = "nlabel" + num;
             var n1 = "nrange" + num;
-            var par = "qtyLoad(" + name + "," + n1 + ")";
 
             var curtable = document.getElementById("itemTable");
             var nrow = curtable.insertRow();
@@ -82,32 +85,25 @@
             var incQty = document.createElement("input");
             qtyLabel = document.createElement("label");
 
-            /*var newRange = document.createElement("input");
-            var newLabel = document.createElement("label");*/
             var removeBut = document.createElement("input");
-
-            /*newRange.setAttribute("type","range");
-            newRange.setAttribute("id",n1);
-            newRange.setAttribute("min","0");
-            newRange.setAttribute("max","10");
-            newRange.setAttribute("onclick",par);*/
 
             decQty.setAttribute("type", "button");
             decQty.setAttribute("value", "-");
-            decQty.setAttribute("onclick", "decQty()");
+            decQty.setAttribute("onclick", "decQty(event)");
+            decQty.setAttribute("id", "dec" + num);
 
+            var par = "incQty(" + event.target.id + ")";
             incQty.setAttribute("type", "button");
             incQty.setAttribute("value", "+");
-            incQty.setAttribute("onclick", "incQty()");
+            incQty.setAttribute("id", "btn" + num);
+            incQty.setAttribute("onclick", "incQty(event)");
 
             removeBut.setAttribute("type", "button");
             removeBut.setAttribute("value", "X");
-            removeBut.setAttribute("onclick", "removeRow()");
+            removeBut.setAttribute("onclick", "removeRow(event)");
+            removeBut.setAttribute("id", "rem" + num);
 
-            //newLabel.setAttribute("id",name);
-            //newLabel.innerHTML = newRange.value;
-
-            qtyLabel.setAttribute("id", qty);
+            qtyLabel.setAttribute("id", "label" + num);
             qtyLabel.innerHTML = 0;
 
             c1.appendChild(newSel);
@@ -118,37 +114,46 @@
             arrNum[num];
             num = num + 1;
             qty = 0;
+            number = number + 1;
         }
 
-        function decQty() {
-            if (qty == 0) {
+        function decQty(event) {
+            var elemId = event.target.id;
+            var elemnum = elemId.replace("dec", "");
+            var labelQty = document.getElementById("label" + elemnum);
+
+            var val = parseInt(labelQty.innerHTML, 10);
+            if (val == 0) {
                 qtyLabel.innerHTML = 0;
             }
             else {
-                qty--;
-                qtyLabel.innerHTML = qty;
+                val--;
+                qtyLabel.innerHTML = val;
             }
-            return;
         }
 
-        function incQty() {
-            qty++;
-            qtyLabel.innerHTML = qty;
-            return;
+        function incQty(event) {
+            var elemId = event.currentTarget.id;
+
+            var elemnum = elemId.replace("btn", "");
+            var labelQty = document.getElementById("label" + elemnum);
+
+            var val = parseInt(labelQty.innerHTML, 10);
+            val = val + 1;
+            labelQty.innerHTML = val;
         }
 
-        function qtyLoad(val, ran) {
-            var lab = document.getElementById(val);
-            var r = document.getElementById(ran);
-            lab.innerHTML = r.value;
-        }
 
         function func() {
 
         }
 
-        function removeRow() {
+        function removeRow(event) {
+            var elemId = event.currentTarget.id;
 
+            var elemnum = elemId.replace("rem", "");
+            var rowElem = document.getElementById("row" + elemnum);
+            rowElem.parentElement.removeChild(rowElem);
         }
         </script>
 </body>

@@ -9,9 +9,11 @@ namespace _183pProject
 {
     public partial class OrderPage : System.Web.UI.Page
     {
+        private int qty;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+      
         }
+      
     }
 }

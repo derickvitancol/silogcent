@@ -3,7 +3,7 @@
 {
     position: relative;
     top: 30px;
-    left:500    px;
+    left: 500px;
 
     display: grid;
     grid-template-columns: auto auto auto;

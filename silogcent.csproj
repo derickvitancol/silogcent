@@ -67,8 +67,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="OrderCss.css" />
+    <Content Include="css\OrderCss.css" />
     <Content Include="OrderPage.aspx" />
+    <Content Include="scripts\orderScripts.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

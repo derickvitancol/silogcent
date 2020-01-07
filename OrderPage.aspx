@@ -4,11 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Silog Central</title>
+    <link rel="stylesheet" type="text/css" href="~/css/OrderCss.css" runat="server"/>
 </head>
 <body>
     <form id="orderForm" runat="server">
-        <div class ="menuGrid">
+        <div class ="menu-grid">
             <div>
                 item1
             </div>
@@ -54,23 +55,20 @@
                     </li>
 
                     <li>
-                        <input type="button" name="orderButton" value="Submit Order" onclick="func()"></input>
+                        <input type="button" name="orderButton" value="Submit Order"/>
                     </li>
                 </ul>  
         </div>
     </form>
 
     <script>
-        window.onload = newItemrow;
         var num = 0;
         var number = 0;
         var arrNum = new Array();
         var qty = 0;
         var qtyLabel;
-        var ev;
+
         function newItemrow() {
-            var name = "nlabel" + num;
-            var n1 = "nrange" + num;
 
             var curtable = document.getElementById("itemTable");
             var nrow = curtable.insertRow();
@@ -92,7 +90,6 @@
             decQty.setAttribute("onclick", "decQty(event)");
             decQty.setAttribute("id", "dec" + num);
 
-            var par = "incQty(" + event.target.id + ")";
             incQty.setAttribute("type", "button");
             incQty.setAttribute("value", "+");
             incQty.setAttribute("id", "btn" + num);
@@ -134,18 +131,12 @@
 
         function incQty(event) {
             var elemId = event.currentTarget.id;
-
             var elemnum = elemId.replace("btn", "");
             var labelQty = document.getElementById("label" + elemnum);
-
             var val = parseInt(labelQty.innerHTML, 10);
+
             val = val + 1;
             labelQty.innerHTML = val;
-        }
-
-
-        function func() {
-
         }
 
         function removeRow(event) {
@@ -155,6 +146,8 @@
             var rowElem = document.getElementById("row" + elemnum);
             rowElem.parentElement.removeChild(rowElem);
         }
-        </script>
+
+        window.onload = newItemrow;
+    </script>
 </body>
 </html>

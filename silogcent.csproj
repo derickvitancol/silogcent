@@ -65,20 +65,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="adminHomepage.aspx" />
+    <Content Include="css\adsilog.png" />
     <Content Include="css\OrderCss.css" />
     <Content Include="OrderPage.aspx" />
     <Content Include="scripts\orderScripts.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="adminHomepage.aspx.cs">
-      <DependentUpon>adminHomepage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="adminHomepage.aspx.designer.cs">
-      <DependentUpon>adminHomepage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="OrderPage.aspx.cs">
       <DependentUpon>OrderPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

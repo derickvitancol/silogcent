@@ -1,6 +1,6 @@
 /*MENU GRID STYLE*/
 @import url('https://fonts.googleapis.com/css?family=Kurale&display=swap');
-div.Head1
+/*div.Head1
 {
     position:-webkit-sticky;
     position: sticky;
@@ -14,9 +14,8 @@ div.Head1
     text-align: center;
     font-family: 'Kurale', serif;
     font-size: 30px;
-    
 }
-/*.Head1:after
+.Head1:after
 {
     content: " ";
     display: block;
@@ -45,11 +44,11 @@ div.Head1
     z-index: 2;
     
     float:left;
-    height: 500px;
+    height: 800px;
     width: 60%;
 
     overflow-y: scroll;
-    /*overflow-x: scroll;*/
+    /*overflow-x: scroll*/;
 
 }
 .menu-grid:after
@@ -68,6 +67,9 @@ div.Head1
 
     height: 300px;
     width: 300px;
+    
+    cursor: pointer;
+    overflow: hidden;
 }
 .menu-grid > div img
 {
@@ -83,6 +85,53 @@ div.Head1
 
     z-index: 1;
 }
+/*div.fadedbox
+{
+    background-color: #666666;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    opacity: 0;
+    width: 360px;
+    height: 100px;
+    padding: 130px 20px;
+
+    z-index: 4;
+}
+.menu-grid > div > img:hover .fadedbox
+{
+    opacity:0.6;
+}
+.menu-grid .text 
+{
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+}
+.menu-grid .desc 
+{
+    font-size: 2.5em;
+    text-transform: lowercase;
+    opacity: 1;
+    transition-delay: 0.2s;
+    transition-duration: 0.3s;
+}
+.menu-grid > div > img:hover .desc, .menu-grid > div > img:focus .desc 
+{
+    opacity: 1;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+}*/
 
 .incBtn
 {
@@ -98,20 +147,22 @@ div.Head1
     border: none;
 
     font-size: 20px;
-    z-index:4;
 }
 
-.decBtn {
+.decBtn
+{
     position: absolute;
     top: 50px;
     left: 10px;
+    
     width: 20px;
     height: 20px;
+
     color: white;
     background-color: transparent;
     border: none;
+
     font-size: 20px;
-    z-index: 4;
 }
 
 .qtyLab
@@ -123,7 +174,10 @@ div.Head1
 }
 .order-part
 {
-    position: relative;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+
     z-index: 1;
     
     float: left;
@@ -143,13 +197,31 @@ label.cartLabel
     font-size: 30px;
     font-family: 'Kurale', serif;
 }
-/*div.orderbutton
+img.cartLabel
 {
-    position: fixed;
-    top: 10px;
+    position: absolute;
+    top: 15px;
+   
+    height: 30px;
+    width: 30px;
+}
+.itemPart
+{
+    position: relative;
     left: 10px;
-    height: 100px;
-    width: 50px;
-    background-color: red;
 
-}*/
+    font-family: 'Kurale', serif;
+}
+.orderButn
+{
+    position:fixed;
+    top: 500px;
+
+    height: 30px;
+    width: 400px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    background-color: rgb(203, 181, 223);
+}

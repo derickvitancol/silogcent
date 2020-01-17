@@ -10,20 +10,57 @@
 <body>
     <form id="orderForm" runat="server">
         <div class ="menu-grid">
+            <!--ADD DIV HERE TO CREATE NEW ITEMS TO THE GRID-->
+            <!--NOTE: ONLY CHANGE THE NUMBER OF THE NAMES OF THE CONTROLS-->
             <div>
                 item1
-            </div>
+                <input type="button" id="dec1" class="decBtn" value="-" onclick="decQty(event)"/>
+                <label id="label1" class="qtyLab">0</label>
+                <input type="button" id="btn1" class="incBtn" value="+" onclick="incQty(event)"/> 
+                <img src="adsilog.png" alt="Adsilog"/>
+
+            </div> 
             <div>
                 item2
+                <input type="button" id="dec2" class="decBtn" value="-" onclick="decQty(event)"/>
+                <label id="label2" class="qtyLab">0</label>
+                <input type="button" id="btn2" class="incBtn" value="+" onclick="incQty(event)"/> 
+                <img src="bacsilog.png" alt="Bacsilog"/>
             </div>
             <div>
                 item3
+                <input type="button" id="dec3" class="decBtn" value="-" onclick="decQty(event)"/>
+                <label id="label3" class="qtyLab">0</label>
+                <input type="button" id="btn3" class="incBtn" value="+" onclick="incQty(event)"/> 
+                <img src="bangsilog.png" alt="Bangsilog"/>
             </div>
             <div>
                 item4
+                <input type="button" id="dec4" class="decBtn" value="-" onclick="decQty(event)"/>
+                <label id="label4" class="qtyLab">0</label>
+                <input type="button" id="btn4" class="incBtn" value="+" onclick="incQty(event)"/> 
+                <img src="longsilog.png" alt="Longsilog"/>
             </div>
             <div>
                 item5
+                <input type="button" id="dec5" class="decBtn" value="-" onclick="decQty(event)"/>
+                <label id="label5" class="qtyLab">0</label>
+                <input type="button" id="btn5" class="incBtn" value="+" onclick="incQty(event)"/> 
+                <img src="ribsilog.png" alt="Ribsilog"/>
+            </div>
+            <div>
+                item6
+                <input type="button" id="dec6" class="decBtn" value="-" onclick="decQty(event)"/>
+                <label id="label6" class="qtyLab">0</label>
+                <input type="button" id="btn6" class="incBtn" value="+" onclick="incQty(event)"/> 
+                <img src="sarsilog.png" alt="Sarsilog"/>
+            </div>
+            <div>
+                item7
+                <input type="button" id="dec7" class="decBtn" value="-" onclick="decQty(event)"/>
+                <label id="label7" class="qtyLab">0</label>
+                <input type="button" id="btn7" class="incBtn" value="+" onclick="incQty(event)"/> 
+                <img src="tapsilog.png" alt="Tapsilog"/>
             </div>
         </div>
         <div class ="orderPart">

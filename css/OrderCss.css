@@ -49,7 +49,7 @@ div.Head1
     width: 60%;
 
     overflow-y: scroll;
-    overflow-x: scroll;
+    /*overflow-x: scroll;*/
 
 }
 .menu-grid:after

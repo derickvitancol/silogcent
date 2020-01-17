@@ -65,6 +65,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\adsilog.png" />
     <Content Include="css\OrderCss.css" />
     <Content Include="OrderPage.aspx" />
     <Content Include="scripts\orderScripts.js" />

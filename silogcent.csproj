@@ -66,7 +66,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\adsilog.png" />
+    <Content Include="css\bacsilog.png" />
+    <Content Include="css\bangsilog.png" />
+    <Content Include="css\longsilog.png" />
     <Content Include="css\OrderCss.css" />
+    <Content Include="css\ribsilog.png" />
+    <Content Include="css\sarsilog.png" />
+    <Content Include="css\tapsilog.png" />
     <Content Include="OrderPage.aspx" />
     <Content Include="scripts\orderScripts.js" />
     <Content Include="Web.config" />

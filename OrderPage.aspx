@@ -6,6 +6,9 @@
 <head runat="server">
     <title>Silog Central</title>
     <link rel="stylesheet" type="text/css" href="~/css/OrderCss.css" runat="server"/>
+    
+    <script src="/scripts/orderScripts.js" type="text/javascript">
+    </script>
 </head>
 <body>
     <form id="orderForm" runat="server">
@@ -15,8 +18,8 @@
             <div>
                 item1
                 <input type="button" id="dec1" class="decBtn" value="-" onclick="decQty(event)"/>
-                <label id="label1" class="qtyLab">0</label>
-                <input type="button" id="btn1" class="incBtn" value="+" onclick="incQty(event)"/> 
+                <asp:label runat="server" AssociatedControlID="label1" id="label1" class="qtyLab">0</asp:label>
+                <input runat="server" type="button" id="btn1" class="incBtn" value="+" onclick="incQty(event)"/> 
                 <img src="/css/adsilog.png" alt="Adsilog"/>
                 <div class="fadedBox">
                     <div class="desc">Adsilog</div>
@@ -25,7 +28,7 @@
             <div>
                 item2
                 <input type="button" id="dec2" class="decBtn" value="-" onclick="decQty(event)"/>
-                <label id="label2" class="qtyLab">0</label>
+                <asp:label runat="server" AssociatedControlID="label2" id="label2" class="qtyLab">0</asp:label>
                 <input type="button" id="btn2" class="incBtn" value="+" onclick="incQty(event)"/> 
                 <img src="/css/bacsilog.png" alt="Bacsilog"/>
                 <div class="fadedBox">
@@ -35,7 +38,7 @@
             <div>
                 item3
                 <input type="button" id="dec3" class="decBtn" value="-" onclick="decQty(event)"/>
-                <label id="label3" class="qtyLab">0</label>
+                <asp:label runat="server" AssociatedControlID="label3" id="label3" class="qtyLab">0</asp:label>
                 <input type="button" id="btn3" class="incBtn" value="+" onclick="incQty(event)"/> 
                 <img src="/css/bangsilog.png" alt="Bangsilog"/>
                 <div class="fadedBox">
@@ -45,7 +48,7 @@
             <div>
                 item4
                 <input type="button" id="dec4" class="decBtn" value="-" onclick="decQty(event)"/>
-                <label id="label4" class="qtyLab">0</label>
+                <asp:label runat="server" AssociatedControlID="label4" id="label4" class="qtyLab">0</asp:label>
                 <input type="button" id="btn4" class="incBtn" value="+" onclick="incQty(event)"/> 
                 <img src="/css/longsilog.png" alt="Longsilog"/>
                 <div class="fadedBox">
@@ -55,7 +58,7 @@
             <div>
                 item5
                 <input type="button" id="dec5" class="decBtn" value="-" onclick="decQty(event)"/>
-                <label id="label5" class="qtyLab">0</label>
+                <asp:label runat="server" AssociatedControlID="label5" id="label5" class="qtyLab">0</asp:label>
                 <input type="button" id="btn5" class="incBtn" value="+" onclick="incQty(event)"/> 
                 <img src="/css/ribsilog.png" alt="Ribsilog"/>
                 <div class="fadedBox">
@@ -65,7 +68,7 @@
             <div>
                 item6
                 <input type="button" id="dec6" class="decBtn" value="-" onclick="decQty(event)"/>
-                <label id="label6" class="qtyLab">0</label>
+                <asp:label runat="server" AssociatedControlID="label6" id="label6" class="qtyLab">0</asp:label>
                 <input type="button" id="btn6" class="incBtn" value="+" onclick="incQty(event)"/> 
                 <img src="/css/sarsilog.png" alt="Sarsilog"/>
                 <div class="fadedBox">
@@ -75,7 +78,8 @@
             <div>
                 item7
                 <input type="button" id="dec7" class="decBtn" value="-" onclick="decQty(event)"/>
-                <label id="label7" class="qtyLab">0</label>
+                <asp:TextBox id="t1" runat="server" OnTextChanged="t1_TextChanged"></asp:TextBox>
+                <asp:label runat="server" AssociatedControlID="label7" id="label7" class="qtyLab">0</asp:label>
                 <input type="button" id="btn7" class="incBtn" value="+" onclick="incQty(event)"/> 
                 <img src="/css/tapsilog.png" alt="Tapsilog"/>
                 <div class="fadedBox">
@@ -90,8 +94,7 @@
                         <input type="text" name="nameText"/>    
                     </li>
                     <li>
-                         
-                           <table id="itemTable">
+                           <table id="itemTable" runat="server">
                             <tr>
                             <th>Item Made</th>
                             <th>Quantity</th>
@@ -118,93 +121,5 @@
         </div>
     </form>
 
-    <script>
-        var num = 0;
-        var number = 0;
-        var arrNum = new Array();
-        var qty = 0;
-        var qtyLabel;
-
-        function newItemrow() {
-
-            var curtable = document.getElementById("itemTable");
-            var nrow = curtable.insertRow();
-            nrow.setAttribute("id", "row" + num);
-            var c1 = nrow.insertCell();
-            var c2 = nrow.insertCell();
-            var c3 = nrow.insertCell();
-
-            var newSel = document.createElement("select");
-
-            var decQty = document.createElement("input");
-            var incQty = document.createElement("input");
-            qtyLabel = document.createElement("label");
-
-            var removeBut = document.createElement("input");
-
-            decQty.setAttribute("type", "button");
-            decQty.setAttribute("value", "-");
-            decQty.setAttribute("onclick", "decQty(event)");
-            decQty.setAttribute("id", "dec" + num);
-
-            incQty.setAttribute("type", "button");
-            incQty.setAttribute("value", "+");
-            incQty.setAttribute("id", "btn" + num);
-            incQty.setAttribute("onclick", "incQty(event)");
-
-            removeBut.setAttribute("type", "button");
-            removeBut.setAttribute("value", "X");
-            removeBut.setAttribute("onclick", "removeRow(event)");
-            removeBut.setAttribute("id", "rem" + num);
-
-            qtyLabel.setAttribute("id", "label" + num);
-            qtyLabel.innerHTML = 0;
-
-            c1.appendChild(newSel);
-            c2.appendChild(decQty);
-            c2.appendChild(qtyLabel);
-            c2.appendChild(incQty);
-            c3.appendChild(removeBut);
-            arrNum[num];
-            num = num + 1;
-            qty = 0;
-            number = number + 1;
-        }
-
-        function decQty(event) {
-            var elemId = event.target.id;
-            var elemnum = elemId.replace("dec", "");
-            var labelQty = document.getElementById("label" + elemnum);
-
-            var val = parseInt(labelQty.innerHTML, 10);
-            if (val == 0) {
-                qtyLabel.innerHTML = 0;
-            }
-            else {
-                val--;
-                qtyLabel.innerHTML = val;
-            }
-        }
-
-        function incQty(event) {
-            var elemId = event.currentTarget.id;
-            var elemnum = elemId.replace("btn", "");
-            var labelQty = document.getElementById("label" + elemnum);
-            var val = parseInt(labelQty.innerHTML, 10);
-
-            val = val + 1;
-            labelQty.innerHTML = val;
-        }
-
-        function removeRow(event) {
-            var elemId = event.currentTarget.id;
-
-            var elemnum = elemId.replace("rem", "");
-            var rowElem = document.getElementById("row" + elemnum);
-            rowElem.parentElement.removeChild(rowElem);
-        }
-
-        window.onload = newItemrow;
-    </script>
 </body>
 </html>

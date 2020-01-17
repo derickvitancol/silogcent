@@ -4,6 +4,7 @@ var arrNum = new Array();
 var qty = 0;
 var qtyLabel;
 var event;
+var quantityArr = [0, 0, 0, 0, 0, 0, 0];
 
 function newItemrow() {
 
@@ -74,6 +75,7 @@ function incQty(event) {
 
     val = val + 1;
     labelQty.innerHTML = val;
+    
 }
 
 function removeRow(event) {
@@ -83,5 +85,8 @@ function removeRow(event) {
     var rowElem = document.getElementById("row" + elemnum);
     rowElem.parentElement.removeChild(rowElem);
 }
+
+
+
 
 window.onload = newItemrow;

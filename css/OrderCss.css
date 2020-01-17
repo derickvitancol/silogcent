@@ -1,48 +1,157 @@
 /*MENU GRID STYLE*/
+@import url('https://fonts.googleapis.com/css?family=Kurale&display=swap');
+div.Head1
+{
+    position:-webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    
+    background-color: rgba(243, 204, 76, 0.904);
+    color: black;
+    padding: 10px;
+
+    text-align: center;
+    font-family: 'Kurale', serif;
+    font-size: 30px;
+    
+}
+/*.Head1:after
+{
+    content: " ";
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: auto;
+    height: 36px;
+    background: linear-gradient( rgb(29, 175, 194) 0%, transparent 0%), linear-gradient(135deg, #272220 33.33%, transparent 33.33%) 0 0%, #272220 linear-gradient(45deg, #272220 33.33%,  rgb(29, 175, 194) 33.33%) 0 0%;
+    background: -webkit-linear-gradient( rgb(29, 175, 194) 0%, transparent 0%), -webkit-linear-gradient(135deg, #272220 33.33%, transparent 33.33%) 0 0%, #272220 -webkit-linear-gradient(45deg, #272220 33.33%,  rgb(29, 175, 194) 33.33%) 0 0%;
+    background: -o-linear-gradient( rgb(29, 175, 194) 0%, transparent 0%), -o-linear-gradient(135deg, #272220 33.33%, transparent 33.33%) 0 0%, #272220 -o-linear-gradient(45deg, #272220 33.33%,  rgb(29, 175, 194) 33.33%) 0 0%;
+    background: -moz-linear-gradient( rgb(29, 175, 194) 0%, transparent 0%), -moz-linear-gradient(135deg, #272220 33.33%, transparent 33.33%) 0 0%, #272220 -moz-linear-gradient(45deg, #272220 33.33%,  rgb(29, 175, 194) 33.33%) 0 0%;
+    background-repeat: repeat-x;
+    background-size: 0px 100%, 9px 27px, 9px 27px;
+}*/
 .menu-grid
 {
     position: relative;
-    top: 30px;
-    left: 500px;
+    top: 0;
 
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 10px;
-    background-color: blueviolet;
+    grid-template-columns: auto auto;
+    grid-gap: 30px;
+    background-color: rgb(203, 181, 223);
     padding: 10px;
+    z-index: 2;
     
-    height: 300px;
-    width: 300px;
+    float:left;
+    height: 500px;
+    width: 60%;
 
     overflow-y: scroll;
     overflow-x: scroll;
 
 }
+.menu-grid:after
+{
+    content: "";
+    display: table;
+    clear: both;
+}
 /* STYLE FOR EDITING THE INDIVIDUAL CELLS IN THE MENU GRID*/
 .menu-grid > div
 {
+    position: relative;
     text-align: center;
     font-size: 30px;
-    background-color: cadetblue;
+    /*background-color: rgb(69, 154, 233);*/
 
-    height: 100px;
-    width: 100px;
+    height: 300px;
+    width: 300px;
+}
+.menu-grid > div img
+{
+    position: absolute;
+
+    top: 50px;
+    bottom: 50px;
+    left: 50px;
+    right: 50px;
+
+    height: 200px;
+    width: 200px;
+
+    z-index: 1;;
 }
 
+.incBtn
+{
+    position: absolute;
+    top: 50px;
+    left: 70px;
 
+    width: 20px;
+    height: 20px;
+
+    color: white;
+    background-color: transparent;
+    border: none;
+
+    font-size: 20px;
+}
+
+.decBtn
+{
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    
+    width: 20px;
+    height: 20px;
+
+    color: white;
+    background-color: transparent;
+    border: none;
+
+    font-size: 20px;
+}
+
+.qtyLab
+{
+    position: absolute;
+    top:50px;
+    left:60px;
+    width: 15px;
+}
 .order-part
 {
     position: relative;
+    z-index: 1;
     
+    float: left;
+    width: auto;
 }
+.order-part::after
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+label.cartLabel
+{
+    position: relative;
+    padding: 10px;
 
-div.orderbutton
+    font-size: 30px;
+    font-family: 'Kurale', serif;
+}
+/*div.orderbutton
 {
     position: fixed;
     top: 10px;
     left: 10px;
     height: 100px;
     width: 50px;
-    background-color: chartreuse;
+    background-color: red;
 
-}
+}*/

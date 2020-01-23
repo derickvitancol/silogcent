@@ -87,15 +87,6 @@ namespace _183pProject
         protected global::System.Web.UI.WebControls.Label label6;
 
         /// <summary>
-        /// t1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox t1;
-
-        /// <summary>
         /// label7 control.
         /// </summary>
         /// <remarks>

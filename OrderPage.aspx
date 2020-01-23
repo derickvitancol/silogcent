@@ -17,71 +17,85 @@
                 item1
                 <input type="button" id="dec1" class="decBtn" value="-" onclick="decQty(event)"/>
                 <label id="label1" class="qtyLab">0</label>
-                <input type="button" id="btn1" class="incBtn" value="+" onclick="incQty(event)"/> 
-                <img src="/css/adsilog.png" alt="Adsilog"/>
-                <!--<div class="fadedBox">
+                <input type="button" id="btn1" class="incBtn" value="+" onclick="incQty(event)"/>
+                <div class="imgBox">
+                    <img src="/css/adsilog.png" alt="Adsilog"/>
+                </div>
+                <div class="descBox">
                     <div class="desc">Adsilog</div>
-                </div>-->
+                </div>
             </div> 
             <div>
                 item2
                 <input type="button" id="dec2" class="decBtn" value="-" onclick="decQty(event)"/>
                 <label id="label2" class="qtyLab">0</label>
                 <input type="button" id="btn2" class="incBtn" value="+" onclick="incQty(event)"/> 
-                <img src="/css/bacsilog.png" alt="Bacsilog"/>
-                <!--<div class="fadedBox">
+                <div class="imgBox">
+                    <img src="/css/bacsilog.png" alt="Bacsilog"/>
+                </div>
+                <div class="descBox">
                     <div class="desc">Bacsilog</div>
-                </div>-->
+                </div>
             </div>
             <div>
                 item3
                 <input type="button" id="dec3" class="decBtn" value="-" onclick="decQty(event)"/>
                 <label id="label3" class="qtyLab">0</label>
-                <input type="button" id="btn3" class="incBtn" value="+" onclick="incQty(event)"/> 
-                <img src="/css/bangsilog.png" alt="Bangsilog"/>
-                <!--<div class="fadedBox">
+                <input type="button" id="btn3" class="incBtn" value="+" onclick="incQty(event)"/>
+                <div class="imgBox">
+                    <img src="/css/bangsilog.png" alt="Bangsilog"/>
+                </div> 
+                <div class="descBox">
                     <div class="desc">Bansilog</div>
-                </div>-->
+                </div>
             </div>
             <div>
                 item4
                 <input type="button" id="dec4" class="decBtn" value="-" onclick="decQty(event)"/>
                 <label id="label4" class="qtyLab">0</label>
-                <input type="button" id="btn4" class="incBtn" value="+" onclick="incQty(event)"/> 
-                <img src="/css/longsilog.png" alt="Longsilog"/>
-                <!--<div class="fadedBox">
+                <input type="button" id="btn4" class="incBtn" value="+" onclick="incQty(event)"/>
+                <div class="imgBox">
+                    <img src="/css/longsilog.png" alt="Longsilog"/>
+                </div> 
+                <div class="descBox">
                     <div class="desc">Longsilog</div>
-                </div>-->
+                </div>
             </div>
             <div>
                 item5
                 <input type="button" id="dec5" class="decBtn" value="-" onclick="decQty(event)"/>
                 <label id="label5" class="qtyLab">0</label>
-                <input type="button" id="btn5" class="incBtn" value="+" onclick="incQty(event)"/> 
-                <img src="/css/ribsilog.png" alt="Ribsilog"/>
-                <!--<div class="fadedBox">
+                <input type="button" id="btn5" class="incBtn" value="+" onclick="incQty(event)"/>
+                <div class="imgBox">
+                    <img src="/css/ribsilog.png" alt="Ribsilog"/>
+                </div> 
+                <div class="descBox">
                     <div class="desc">Ribsilog</div>
-                </div>-->
+                </div>
             </div>
             <div>
                 item6
                 <input type="button" id="dec6" class="decBtn" value="-" onclick="decQty(event)"/>
                 <label id="label6" class="qtyLab">0</label>
-                <input type="button" id="btn6" class="incBtn" value="+" onclick="incQty(event)"/> 
-                <img src="/css/sarsilog.png" alt="Sarsilog"/>
-                <!--<div class="fadedBox">
+                <input type="button" id="btn6" class="incBtn" value="+" onclick="incQty(event)"/>
+                <div class="imgBox">
+                    <img src="/css/sarsilog.png" alt="Sarsilog"/>
+                </div> 
+                <div class="descBox">
                     <div class="desc">Sarsilog</div>
-                </div>-->
+                </div>
             </div>
             <div>
                 item7
                 <input type="button" id="dec7" class="decBtn" value="-" onclick="decQty(event)"/>
                 <label id="label7" class="qtyLab">0</label>
-                <input type="button" id="btn7" class="incBtn" value="+" onclick="incQty(event)"/> 
-                <img src="/css/tapsilog.png" alt="Tapsilog"/>
-                <!--<div class="fadedBox">
+                <input type="button" id="btn7" class="incBtn" value="+" onclick="incQty(event)"/>
+                <div class="imgBox">
+                    <img src="/css/tapsilog.png" alt="Tapsilog"/>
+                </div>
+                <div class="descBox">
                     <div class="desc">Tapsilog</div>
-                </div>-->
+                </div>
             </div>
         </div>
         <div class ="orderPart">

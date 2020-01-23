@@ -1,5 +1,9 @@
 /*MENU GRID STYLE*/
 @import url('https://fonts.googleapis.com/css?family=Kurale&display=swap');
+body
+{
+    background-color: #ffeaa7;
+}
 /*div.Head1
 {
     position:-webkit-sticky;
@@ -39,7 +43,6 @@
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 30px;
-    background-color: rgb(203, 181, 223);
     padding: 10px;
     z-index: 2;
     
@@ -63,75 +66,58 @@
     position: relative;
     text-align: center;
     font-size: 30px;
-    /*background-color: rgb(69, 154, 233);*/
+    background-color: #74b9ff;
 
     height: 300px;
     width: 300px;
-    
+
     cursor: pointer;
     overflow: hidden;
 }
-.menu-grid > div img
+.menu-grid > div .imgBox
+{
+    position: relative;
+}
+.menu-grid > div .imgBox img
 {
     position: absolute;
 
-    top: 50px;
-    bottom: 50px;
-    left: 50px;
-    right: 50px;
+    top: 10px;
+    left: 25px;
 
-    height: 200px;
-    width: 200px;
-
+    height: 250px;
+    width: 250px;
+    
     z-index: 1;
 }
-/*div.fadedbox
+.menu-grid > div .descBox
 {
-    background-color: #666666;
+   position: absolute;
+   top: 50px;
+   bottom: 10px;
+   left: 10px;
+   right: 10px;
+   border-radius: 50%;
+   background-color:#fab1a0 ;
+   opacity: 0.8;
+}
+.menu-grid > div > .descBox .desc
+{
     position: absolute;
-    top: 0;
-    left: 0;
-    color: #fff;
-    -webkit-transition: all 300ms ease-out;
-    -moz-transition: all 300ms ease-out;
-    -o-transition: all 300ms ease-out;
-    -ms-transition: all 300ms ease-out;
-    transition: all 300ms ease-out;
-    opacity: 0;
-    width: 360px;
-    height: 100px;
-    padding: 130px 20px;
-
-    z-index: 4;
+    top: 50px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    text-align: center;
+    color: black;
+    
+    transform: scaleY(0);
+    transition: transform .5s;
 }
-.menu-grid > div > img:hover .fadedbox
+img:hover .descBox .desc
 {
-    opacity:0.6;
+    transform: scaleY(1);
 }
-.menu-grid .text 
-{
-    -webkit-transition: all 300ms ease-out;
-    -moz-transition: all 300ms ease-out;
-    -o-transition: all 300ms ease-out;
-    -ms-transition: all 300ms ease-out;
-    transition: all 300ms ease-out;
-    transform: translateY(30px);
-    -webkit-transform: translateY(30px);
-}
-.menu-grid .desc 
-{
-    font-size: 2.5em;
-    text-transform: lowercase;
-    opacity: 1;
-    transition-delay: 0.2s;
-    transition-duration: 0.3s;
-}
-.menu-grid > div > img:hover .desc, .menu-grid > div > img:focus .desc 
-{
-    opacity: 1;
-    transform: translateY(0px);
-    -webkit-transform: translateY(0px);
-}*/
 
 .incBtn
 {

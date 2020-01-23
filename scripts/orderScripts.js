@@ -4,7 +4,115 @@ var arrNum = new Array();
 var qty = 0;
 var qtyLabel;
 var event;
-var quantityArr = [0, 0, 0, 0, 0, 0, 0];
+var orderNotBlank = false;
+var ordList;
+//var quantityArr = [0, 0, 0, 0, 0, 0, 0];
+
+
+
+
+class OrderList {
+    constructor()
+    {
+        //ITEMS 1 - 7 CORRESPOND TO LABELS 1 -7 
+        this.itemArr = [0, 0, 0, 0, 0, 0, 0];
+        this.NameArr = ["adsilog", "bacsilog", "bangsilog", "longsilog", "ribsilog", "sarsilog", "tapsilog"];
+    }
+
+    static clearQuantity()
+    {
+        var counter = 1;
+        var editLabel;
+
+        while (counter < 8) {
+            editLabel = document.getElementById("label" + counter);
+            editLabel.innerHTML = "0";
+            counter = counter + 1;
+        }
+
+    }
+
+    static clearOrder()
+    {
+        var addCartButton = document.getElementById("addtocart");
+        var editCart = document.getElementById("editOrder");
+        var itemTable = document.getElementById("itemTable");
+        var len = itemTable.rows.length - 1;
+
+        while (len > 0) {
+            itemTable.deleteRow(len);
+            len = len - 1;
+        }
+        editCart.setAttribute("disabled", "");
+        addCartButton.removeAttribute("disabled");
+    }
+
+    //Function to add items to cart 
+    //LOCK THE MENU AFTER CLICKING THIS
+    static AddtoCart(ord) {
+        var addCartButton = document.getElementById("addtocart");
+        var editCart = document.getElementById("editOrder");
+        var counter = 0;
+        var name = "label";
+        var num = counter +1;
+        var sourceLabel;
+        var nrow;
+        var c1;
+        var c2;
+
+        var parentTable = document.getElementById("itemTable");
+
+        while (counter < 6)
+        {
+            sourceLabel = document.getElementById(name + num);
+
+            ord.itemArr[counter] = sourceLabel.innerHTML;
+            if (ord.itemArr[counter] > 0) {
+                nrow = parentTable.insertRow();
+
+                //NEW CELLS 
+                c1 = nrow.insertCell();
+                c2 = nrow.insertCell();
+
+                //CREATE THE ELEMETNS TO BE PLACED IN THE CELLS
+                c1.innerHTML = ord.NameArr[counter];
+                c2.innerHTML = ord.itemArr[counter];
+
+
+                nrow.appendChild(c1);
+                nrow.appendChild(c2);
+
+                parentTable.appendChild(nrow);
+                orderNotBlank = true;
+            }
+            counter = counter + 1; 
+            num = counter + 1;
+
+           
+        }
+
+        if (orderNotBlank == true)
+        {
+            addCartButton.setAttribute("disabled", "");
+            editCart.removeAttribute("disabled");
+        }
+        
+        //SETS THE TEXTS ON THE GRID TO 0
+        OrderList.clearQuantity();
+
+    }
+
+    static EditCart(ord) {
+        ord.itemArr = [0, 0, 0, 0, 0, 0, 0];
+        orderNotBlank = false;
+       
+        OrderList.clearOrder()
+    }
+
+    //CLEARS THE QUANTITIES IN THE GRID
+   
+
+}
 
 function newItemrow() {
 
@@ -56,6 +164,7 @@ function decQty(event) {
     var elemId = event.target.id;
     var elemnum = elemId.replace("dec", "");
     var labelQty = document.getElementById("label" + elemnum);
+    
 
     var val = parseInt(labelQty.innerHTML, 10);
     if (val == 0) {
@@ -75,6 +184,7 @@ function incQty(event) {
 
     val = val + 1;
     labelQty.innerHTML = val;
+
     
 }
 
@@ -86,7 +196,16 @@ function removeRow(event) {
     rowElem.parentElement.removeChild(rowElem);
 }
 
+function AddOrder() {
+    ordList = new OrderList();
+    OrderList.AddtoCart(ordList);
+}
+
+function EditOrder() {
+
+    OrderList.EditCart(ordList);
+
+}
 
 
 
-window.onload = newItemrow;

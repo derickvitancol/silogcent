@@ -11,84 +11,87 @@
 </head>
 <body>
     <form id="orderForm" runat="server">
-        <!--PUT A ADD TO CART BUTTON NA NAKASTICKY-->
+        
         <input type="button" id="addtocart" name="addCartButton" value="Add to Cart" onclick="AddOrder()"/>
         <input type="button" id="editOrder" name="editOrder" value="Edit Orders" onclick="EditOrder()" disabled=""/>
         <div class ="menu-grid">
+            <!--PUT A ADD TO CART BUTTON NA NAKASTICKY-->
             <!--ADD DIV HERE TO CREATE NEW ITEMS TO THE GRID-->
             <!--NOTE: ONLY CHANGE THE NUMBER OF THE NAMES OF THE CONTROLS-->
-            <div>
-                item1
+            <div class="grid-item">
                 <input type="button" id="dec1" class="decBtn" value="-" onclick="decQty(event)"/>
                 <asp:label runat="server" AssociatedControlID="label1" id="label1" class="qtyLab">0</asp:label>
                 <input runat="server" type="button" id="btn1" class="incBtn" value="+" onclick="incQty(event)"/> 
+                Adsilog
                 <img src="/css/adsilog.png" alt="Adsilog"/>
-                <!--<div class="fadedBox">
-                    <div class="desc">Adsilog</div>
-                </div>-->
+                <div class="hoverDiv">
+                    Adsilog is a combination of Adobo Egg and Fried Rice.
+                </div>
             </div> 
-            <div>
-                item2
+            <div  class="grid-item">
                 <input type="button" id="dec2" class="decBtn" value="-" onclick="decQty(event)"/>
                 <asp:label runat="server" AssociatedControlID="label2" id="label2" class="qtyLab">0</asp:label>
                 <input type="button" id="btn2" class="incBtn" value="+" onclick="incQty(event)"/> 
                 <img src="/css/bacsilog.png" alt="Bacsilog"/>
-                <!--<div class="fadedBox">
-                    <div class="desc">Bacsilog</div>
-                </div>-->
+                Bacsilog
+                <div class="hoverDiv">
+                    Bacsilog is a combination of Bacon Egg and Fried Rice.
+                </div>
             </div>
-            <div>
-                item3
+            <div  class="grid-item">
                 <input type="button" id="dec3" class="decBtn" value="-" onclick="decQty(event)"/>
                 <asp:label runat="server" AssociatedControlID="label3" id="label3" class="qtyLab">0</asp:label>
                 <input type="button" id="btn3" class="incBtn" value="+" onclick="incQty(event)"/> 
                 <img src="/css/bangsilog.png" alt="Bangsilog"/>
-                <!--<div class="fadedBox">
-                    <div class="desc">Bansilog</div>
-                </div>-->
+                Bangsilog
+                <div class="hoverDiv">
+                    Bangsilog is a combination of Fried Bangus Egg and Fried Rice.
+                </div>
+
             </div>
-            <div>
-                item4
+            <div  class="grid-item">
                 <input type="button" id="dec4" class="decBtn" value="-" onclick="decQty(event)"/>
                 <asp:label runat="server" AssociatedControlID="label4" id="label4" class="qtyLab">0</asp:label>
                 <input type="button" id="btn4" class="incBtn" value="+" onclick="incQty(event)"/> 
                 <img src="/css/longsilog.png" alt="Longsilog"/>
-                <!--<div class="fadedBox">
-                    <div class="desc">Longsilog</div>
-                </div>-->
+                Longsilog
+                <div class="hoverDiv">
+                    Longsilog is a combination of Longanisa Egg and Fried Rice.
+                </div>
             </div>
-            <div>
-                item5
+            <div  class="grid-item">
                 <input type="button" id="dec5" class="decBtn" value="-" onclick="decQty(event)"/>
                 <asp:label runat="server" AssociatedControlID="label5" id="label5" class="qtyLab">0</asp:label>
                 <input type="button" id="btn5" class="incBtn" value="+" onclick="incQty(event)"/> 
                 <img src="/css/ribsilog.png" alt="Ribsilog"/>
-                <!--<div class="fadedBox">
-                    <div class="desc">Ribsilog</div>
-                </div>-->
+                Ribsilog
+                <div class="hoverDiv">
+                    Ribsilog is a combination of Pork Ribs Egg and Fried Rice.
+                </div>
             </div>
-            <div>
-                item6
+            <div  class="grid-item">
                 <input type="button" id="dec6" class="decBtn" value="-" onclick="decQty(event)"/>
                 <asp:label runat="server" AssociatedControlID="label6" id="label6" class="qtyLab">0</asp:label>
                 <input type="button" id="btn6" class="incBtn" value="+" onclick="incQty(event)"/> 
                 <img src="/css/sarsilog.png" alt="Sarsilog"/>
-                <!--<div class="fadedBox">
-                    <div class="desc">Sarsilog</div>
-                </div>-->
+                Sarsilog
+                <div class="hoverDiv">
+                    Sarsilog is a combination of Sardines Egg and Fried Rice.
+                </div>
             </div>
-            <div>
-                item7
+            <div  class="grid-item">
                 <input type="button" id="dec7" class="decBtn" value="-" onclick="decQty(event)"/>
                 <asp:label runat="server" AssociatedControlID="label7" id="label7" class="qtyLab">0</asp:label>
                 <input type="button" id="btn7" class="incBtn" value="+" onclick="incQty(event)"/> 
                 <img src="/css/tapsilog.png" alt="Tapsilog"/>
-                <!--<div class="fadedBox">
-                    <div class="desc">Tapsilog</div>
-                </div>-->
+                Tapsilog
+                <div class="hoverDiv">
+                    Tapsilog is a combination of Tapa Egg and Fried Rice.
+                </div>
             </div>
         </div>
-        <div class ="orderPart">
+        <div class ="order-part">
+            Silog Central's Cart
                 <ul>
                     <li>
                         <label for="nameText">Name of Customer</label>
@@ -113,7 +116,7 @@
                     </li>
 
                     <li>
-                        <input type="button" name="orderButton" value="Submit Order"/>
+                        <input type="button" class="orderButn" name="orderButton" value="Submit Order"/>
                     </li>
                 </ul>  
         </div>

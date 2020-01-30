@@ -1,7 +1,7 @@
 /*MENU GRID STYLE*/
 @import url('https://fonts.googleapis.com/css?family=Kurale&display=swap');
-body
-{
+
+body {
     background-color: #ffeaa7;
 }
 /*div.Head1
@@ -35,87 +35,55 @@ body
     background-repeat: repeat-x;
     background-size: 0px 100%, 9px 27px, 9px 27px;
 }*/
-.menu-grid
-{
+.menu-grid {
     position: relative;
     top: 0;
-
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 30px;
     padding: 10px;
     z-index: 2;
-    
-    float:left;
+    float: left;
     height: 800px;
     width: 60%;
-
     overflow-y: scroll;
     /*overflow-x: scroll*/;
-
 }
-.menu-grid:after
-{
+
+.menu-grid:after {
     content: "";
     display: table;
     clear: both;
-}
+    }
 /* STYLE FOR EDITING THE INDIVIDUAL CELLS IN THE MENU GRID*/
-.menu-grid > div
-{
-    position: relative;
-    text-align: center;
-    font-size: 30px;
-    background-color: #74b9ff;
+.menu-grid > .grid-item {
+        position: relative;
+        text-align: center;
+        font-size: 30px;
+        background-color: #74b9ff;
+        height: 300px;
+        width: 300px;
+        cursor: pointer;
+        overflow: hidden;
+    }
 
-    height: 300px;
-    width: 300px;
+.menu-grid > .grid-item .imgBox {
+        position: relative;
+    }
 
-    cursor: pointer;
-    overflow: hidden;
-}
-.menu-grid > div .imgBox
-{
-    position: relative;
-}
-.menu-grid > div .imgBox img
-{
+.menu-grid > .grid-item img {
     position: absolute;
-
-    top: 10px;
+    top: 90px;
     left: 25px;
-
-    height: 250px;
+    height: 200px;
     width: 250px;
+    /*z-index: 1*/
     
-    z-index: 1;
+    transition: transform 1s;
+
 }
-.menu-grid > div .descBox
-{
-   position: absolute;
-   top: 50px;
-   bottom: 10px;
-   left: 10px;
-   right: 10px;
-   border-radius: 50%;
-   background-color:#fab1a0 ;
-   opacity: 0.8;
-}
-.menu-grid > div > .descBox .desc
-{
-    position: absolute;
-    top: 50px;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    text-align: center;
-    color: black;
-    
-    transform: scaleY(0);
-    transition: transform .5s;
-}
-img:hover .descBox .desc
-{
+
+img:hover .descBox .desc {
     transform: scaleY(1);
 }
 
@@ -123,91 +91,117 @@ img:hover .descBox .desc
 {
     position: absolute;
     top: 50px;
-    left: 70px;
+    right:10px;
 
     width: 20px;
     height: 20px;
-
     color: white;
     background-color: transparent;
     border: none;
-
     font-size: 20px;
 }
 
-.decBtn
-{
+.decBtn {
     position: absolute;
     top: 50px;
     left: 10px;
-    
     width: 20px;
     height: 20px;
-
     color: white;
     background-color: transparent;
     border: none;
-
     font-size: 20px;
 }
 
-.qtyLab
-{
+.qtyLab {
     position: absolute;
-    top:50px;
-    left:60px;
+    top: 50px;
+    left: 60px;
     width: 15px;
 }
-.order-part
-{
+
+.order-part {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-
     z-index: 1;
-    
     float: left;
     width: auto;
+    font-family: 'Kurale', serif;
 }
-.order-part::after
-{
+
+.order-part::after {
     content: "";
     display: table;
     clear: both;
 }
-label.cartLabel
-{
+
+.order-part > ul {
+    list-style:none;
+    }
+
+label.cartLabel {
     position: relative;
     padding: 10px;
-
     font-size: 30px;
     font-family: 'Kurale', serif;
-}
-img.cartLabel
-{
+ }
+
+img.cartLabel {
     position: absolute;
     top: 15px;
-   
     height: 30px;
     width: 30px;
 }
-.itemPart
-{
+
+.itemPart {
     position: relative;
     left: 10px;
-
     font-family: 'Kurale', serif;
 }
-.orderButn
-{
-    position:fixed;
-    top: 500px;
 
+.orderButn {
+    position: fixed;
+    top: 500px;
     height: 30px;
     width: 400px;
-
     text-align: center;
     text-transform: uppercase;
-
     background-color: rgb(203, 181, 223);
+}
+/*ADDED BY DERICK*/
+.grid-item{
+    position:absolute;
+    padding:10px;
+}
+.menu-grid .grid-item .hoverDiv {
+    position:absolute;
+    top:90px;
+    left:10px;
+    right:10px;
+
+    background:rgba(211,211,211,0.8);
+    
+    border:solid;
+    padding:20px;
+    font-family: 'Kurale', serif;
+
+    text-align:center;
+    
+    transform:scale(0);
+    transition: transform 0.5s;
+
+}
+
+.menu-grid .grid-item:hover .hoverDiv
+{
+    transform:scale(1);
+   
+}
+
+.menu-grid .grid-item:hover img
+{
+    transform:scale(1.2);
+    z-index:(-1);
+
 }

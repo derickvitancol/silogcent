@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Century Gothic;
+}
+
+.main{
+    
+    max-width: 1200px;
+    margin: auto;
+    margin-right: 20px;
+}
+
+
+header {
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../Resource/cover.jpg);
+    height: 150vh;
+    background-size: auto;
+    background-position: center;
+}
+
+ul {
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+    
+}
+
+ul li {
+    display: inline-block;
+    
+}
+
+ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px 20px;
+    border: 1px solid #ffffff transparent;
+    transition: 0.6s ease; 
+    font-size: 20px; 
+}
+
+ul li.active a {
+    background-color: #ffffff;
+    color: #000;
+}
+
+ul li a:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.title {
+    position: absolute;
+    top: 24%;
+    left: 39%;
+    transform: translate(-50%, -50%); 
+}
+
+.title h1 {
+    color: #fff;
+    font-size: 70px;
+}
+
+.title h3 {
+    color: #fff;
+    font-size: 25px;
+    position:absolute;
+    left: 10%;
+}
+
+.button{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%); 
+}
+.button a{
+    font-size: 25px;
+}
+
+#btn-menu{
+    border: 1px solid #fff;
+    padding: 10px 30px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.6s ease;
+}
+
+#btn-menu:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+.logo img{
+    float: left;
+    width: 25%;
+    height: auto;
+    position: absolute;
+    top: 10%
+}
+
+.loginbox{
+    width: 320px;
+    height: 765px;
+    background-color: #000;
+    color: #fff; 
+    top: 80%;
+    left: 80%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+
+}
+
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+    
+}
+
+.loginbox h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.HouseNumber{
+    width: 20%;
+}
+
+
+.loginbox input[type="text"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px; 
+    color: #fff;
+    font-size: 16px;
+}
+
+.loginbox select {
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #808080;
+    font-size: 16px;
+}
+
+.loginbox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    margin-top: 10%;
+    background: #fb252f;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.loginbox input[type="submit"]:hover{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+
+#three-container{
+    position: absolute;
+    right: 25%;
+    top: 15%;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

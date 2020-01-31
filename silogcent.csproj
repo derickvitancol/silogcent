@@ -70,11 +70,11 @@
     <Content Include="css\bacsilog.png" />
     <Content Include="css\bangsilog.png" />
     <Content Include="css\longsilog.png" />
-    <Content Include="css\OrderCss.css" />
+    <Content Include="css\ordStyle.css" />
     <Content Include="css\ribsilog.png" />
     <Content Include="css\sarsilog.png" />
     <Content Include="css\tapsilog.png" />
-    <Content Include="OrderPage.aspx" />
+    <Content Include="ordPage.aspx" />
     <Content Include="scripts\orderScripts.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -87,12 +87,12 @@
       <DependentUpon>AdminPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Item.cs" />
-    <Compile Include="OrderPage.aspx.cs">
-      <DependentUpon>OrderPage.aspx</DependentUpon>
+    <Compile Include="ordPage.aspx.cs">
+      <DependentUpon>ordPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="OrderPage.aspx.designer.cs">
-      <DependentUpon>OrderPage.aspx</DependentUpon>
+    <Compile Include="ordPage.aspx.designer.cs">
+      <DependentUpon>ordPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

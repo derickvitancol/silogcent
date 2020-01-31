@@ -70,7 +70,7 @@
     <Content Include="css\bacsilog.png" />
     <Content Include="css\bangsilog.png" />
     <Content Include="css\longsilog.png" />
-    <Content Include="css\OrderCss.css" />
+    <Content Include="css\ordStyle.css" />
     <Content Include="css\ribsilog.png" />
     <Content Include="css\sarsilog.png" />
     <Content Include="css\style.css" />
@@ -95,8 +95,8 @@
       <DependentUpon>OrderPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="OrderPage.aspx.designer.cs">
-      <DependentUpon>OrderPage.aspx</DependentUpon>
+    <Compile Include="ordPage.aspx.designer.cs">
+      <DependentUpon>ordPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

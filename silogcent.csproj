@@ -65,6 +65,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CoverPage.aspx" />
     <Content Include="css\adsilog.png" />
     <Content Include="css\bacsilog.png" />
     <Content Include="css\bangsilog.png" />
@@ -72,12 +73,24 @@
     <Content Include="css\OrderCss.css" />
     <Content Include="css\ribsilog.png" />
     <Content Include="css\sarsilog.png" />
+    <Content Include="css\style.css" />
     <Content Include="css\tapsilog.png" />
+    <Content Include="Images\cover.jpg" />
+    <Content Include="Images\Logo.png" />
+    <Content Include="Images\LogoAvatar.png" />
+    <Content Include="Images\LogoWithColor.jpg" />
     <Content Include="OrderPage.aspx" />
     <Content Include="scripts\orderScripts.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoverPage.aspx.cs">
+      <DependentUpon>CoverPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoverPage.aspx.designer.cs">
+      <DependentUpon>CoverPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="OrderPage.aspx.cs">
       <DependentUpon>OrderPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -96,6 +109,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
